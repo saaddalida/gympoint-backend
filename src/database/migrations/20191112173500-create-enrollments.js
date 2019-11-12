@@ -7,23 +7,19 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      title: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       student_id: {
         type: Sequelize.INTEGER,
         references: { model: 'students', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
-        allowNull: false,
+        allowNull: true,
       },
       plan_id: {
         type: Sequelize.INTEGER,
         references: { model: 'plans', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
-        allowNull: false,
+        allowNull: true,
       },
       price: {
         type: Sequelize.FLOAT,
